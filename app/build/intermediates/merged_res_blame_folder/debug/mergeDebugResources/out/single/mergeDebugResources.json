@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/xml_qwerty.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/xml/qwerty.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/drawable_key_bg.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/drawable/key_bg.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/xml_method.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/xml/method.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/layout_keyboard_layout.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/layout/keyboard_layout.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.antih3ro.rhymekeyboard.app-debug-33:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.antih3ro.rhymekeyboard.app-main-35:/mipmap-hdpi/ic_launcher_round.png"
+    }
+]
