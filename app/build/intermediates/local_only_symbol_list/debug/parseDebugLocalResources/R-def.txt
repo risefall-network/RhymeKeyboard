@@ -1,21 +1,16 @@
 R_DEF: Internal format may change without notice
 local
-color bg_dark
 color ic_launcher_background
-color key_text
-color neon_orange
 drawable ic_launcher_foreground
 drawable key_bg
 id aggregate_toggle
 id keyboard_view
 id status_text
 id suggestion_bar
-id suggestion_scroller
 layout keyboard_layout
 mipmap ic_launcher
 mipmap ic_launcher_round
-string app_name
+string label_aggregate
+string status_ready
 string subtype_label
-style Theme.RhymeKeyboard
 xml method
-xml qwerty

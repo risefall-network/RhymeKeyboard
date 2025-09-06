@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.antih3ro.rhymekeyboard.app-mergeDebugResources-31:/values-v25/values-v25.xml",
+            "outputFile": "com.antih3ro.rhymekeyboard.app-mergeDebugResources-33:/values-v25/values-v25.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Administrator\\.gradle\\caches\\9.1.0-rc-1\\transforms\\0474838bf06e3bb0468bf6205fc22a24\\workspace\\transformed\\appcompat-1.7.1\\res\\values-v25\\values-v25.xml",

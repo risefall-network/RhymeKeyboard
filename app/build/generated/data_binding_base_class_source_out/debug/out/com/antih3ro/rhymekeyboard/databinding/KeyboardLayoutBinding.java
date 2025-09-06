@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -34,18 +33,14 @@ public final class KeyboardLayoutBinding implements ViewBinding {
   @NonNull
   public final LinearLayout suggestionBar;
 
-  @NonNull
-  public final HorizontalScrollView suggestionScroller;
-
   private KeyboardLayoutBinding(@NonNull LinearLayout rootView, @NonNull CheckBox aggregateToggle,
       @NonNull KeyboardView keyboardView, @NonNull TextView statusText,
-      @NonNull LinearLayout suggestionBar, @NonNull HorizontalScrollView suggestionScroller) {
+      @NonNull LinearLayout suggestionBar) {
     this.rootView = rootView;
     this.aggregateToggle = aggregateToggle;
     this.keyboardView = keyboardView;
     this.statusText = statusText;
     this.suggestionBar = suggestionBar;
-    this.suggestionScroller = suggestionScroller;
   }
 
   @Override
@@ -99,14 +94,8 @@ public final class KeyboardLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.suggestion_scroller;
-      HorizontalScrollView suggestionScroller = ViewBindings.findChildViewById(rootView, id);
-      if (suggestionScroller == null) {
-        break missingId;
-      }
-
       return new KeyboardLayoutBinding((LinearLayout) rootView, aggregateToggle, keyboardView,
-          statusText, suggestionBar, suggestionScroller);
+          statusText, suggestionBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

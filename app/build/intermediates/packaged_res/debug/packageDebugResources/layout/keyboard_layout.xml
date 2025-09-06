@@ -9,11 +9,12 @@
 
     <!-- Suggestion / rhyme bar -->
     <HorizontalScrollView
-        android:id="@+id/suggestion_scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
         android:scrollbars="none">
+
         <LinearLayout
             android:id="@+id/suggestion_bar"
             android:layout_width="wrap_content"
@@ -35,19 +36,19 @@
 
         <CheckBox
             android:id="@+id/aggregate_toggle"
-            android:text="Aggregate"
-            android:textColor="#DDDDDD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_aggregate"
+            android:textColor="#DDDDDD" />
 
         <TextView
             android:id="@+id/status_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#888888"
-            android:textSize="12sp"
             android:paddingStart="12dp"
-            android:text="ready"/>
+            android:text="@string/status_ready"
+            android:textColor="#888888"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <!-- Keyboard view -->

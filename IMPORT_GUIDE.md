@@ -1,7 +1,6 @@
 # How to Import RhymeKeyboard into Android Studio
 
 ## Prerequisites
-
 - Android Studio installed (latest version recommended)
 - Android SDK installed
 - Java/Kotlin development environment set up
@@ -16,7 +15,7 @@
 ### 2. Import the Project
 - On the Welcome screen, click **"Open"** (or **"Open an existing Android Studio project"**)
 - Navigate to: `C:\Users\Administrator\Desktop\RhymeKeyboard`
-- Select the **RhymeKeyboard** folder (the one containing `build.gradle.kts` and `settings.gradle.kts`)
+- Select the **RhymeKeyboard** folder (the one containing `FFFFF` and `settings.gradle.kts`)
 - Click **"OK"**
 
 ### 3. Wait for Gradle Sync
