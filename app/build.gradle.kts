@@ -40,7 +40,6 @@ android {
         }
         debug {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(getDefaultProguardFile("proguard-android.txt"))
             multiDexEnabled = true
             matchingFallbacks += listOf("debug")

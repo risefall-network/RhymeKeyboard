@@ -1,0 +1,11 @@
+<resources>
+    <string name="subtype_label">English (Rhyme)</string>
+    <string name="status_ready">ready</string>
+    <string name="label_aggregate">Aggregate</string>
+       <string name="status_aggregating">aggregating…</string>
+       <string name="status_listening">listening…</string>
+       <string name="status_no_rhymes">no rhymes</string>
+       <string name="status_rhyme_count">%d rhymes</string>
+    <string name="aggregate_rhymes">Aggregate Rhymes</string>
+    <string name="status_error_fetching" />
+</resources>
