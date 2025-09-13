@@ -41,7 +41,7 @@ android {
         debug {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"))
-            multiDexEnabled = true
+            multiDexEnabled = false
             matchingFallbacks += listOf("debug")
         }
     }
@@ -52,19 +52,15 @@ android {
     }
 
     buildFeatures { viewBinding = true }
-    buildToolsVersion = "36.0.0"
-    dependenciesInfo {
-        includeInApk = true
-        includeInBundle = true
-    }
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.2.10")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
-    implementation("com.squareup.okhttp3:okhttp:5.1.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0") // Updated for consistency
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0") // Updated for consistency
+    implementation("com.squareup.okhttp3:okhttp:4.12.0") // Updated for consistency
 
-    implementation("androidx.core:core-ktx:1.17.0")
-    implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("com.google.android.material:material:1.13.0")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2") // CRITICAL: Added this dependency
 }

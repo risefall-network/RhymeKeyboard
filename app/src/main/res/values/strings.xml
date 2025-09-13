@@ -8,4 +8,5 @@
        <string name="status_rhyme_count">%d rhymes</string>
     <string name="aggregate_rhymes">Aggregate Rhymes</string>
     <string name="status_error_fetching" />
+    <string name="aggregate">Aggregate</string>
 </resources>

@@ -6,23 +6,21 @@ import android.annotation.SuppressLint
 import android.inputmethodservice.InputMethodService
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
+import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.CoroutineScope
+import com.antih3ro.rhymekeyboard.databinding.KeyboardLayoutBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.withContext
 import kotlin.coroutines.cancellation.CancellationException
-import com.antih3ro.rhymekeyboard.databinding.KeyboardLayoutBinding
-import android.util.Log // Import Log for debugging
 
 @Suppress("DEPRECATION") // Keep for now as Keyboard and KeyboardView are deprecated but widely used
 class RhymeKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActionListener {
@@ -75,9 +73,8 @@ class RhymeKeyboardService : InputMethodService(), KeyboardView.OnKeyboardAction
         // Load the keyboard definition XML
         val keyboard = Keyboard(this, R.xml.qwerty)
         Log.d(TAG, "onCreateInputView: Keyboard object created from R.xml.qwerty")
-
         keyboardView.keyboard = keyboard // Set the keyboard to the KeyboardView
-        keyboardView.setOnKeyboardActionListener(this) // Set this service as the listener
+        keyboardView.setOnKeyboardActionListener(this) // Set the listener for key presses
         Log.d(TAG, "onCreateInputView: Keyboard and listener set on KeyboardView")
 
         return root
@@ -102,14 +99,18 @@ class RhymeKeyboardService : InputMethodService(), KeyboardView.OnKeyboardAction
     }
 
     // --- KeyboardView.OnKeyboardActionListener methods ---
+
+    @Deprecated("Deprecated in Java")
     override fun onPress(primaryCode: Int) {
         Log.d(TAG, "onPress: code = $primaryCode")
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRelease(primaryCode: Int) {
         Log.d(TAG, "onRelease: code = $primaryCode")
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
         Log.d(TAG, "onKey: primaryCode = $primaryCode, keyCodes = ${keyCodes?.joinToString()}")
         val ic = currentInputConnection ?: return
@@ -148,6 +149,7 @@ class RhymeKeyboardService : InputMethodService(), KeyboardView.OnKeyboardAction
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onText(text: CharSequence?) {
         Log.d(TAG, "onText: $text")
         text?.let {
@@ -155,9 +157,13 @@ class RhymeKeyboardService : InputMethodService(), KeyboardView.OnKeyboardAction
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun swipeLeft() { Log.d(TAG, "swipeLeft") }
+    @Deprecated("Deprecated in Java")
     override fun swipeRight() { Log.d(TAG, "swipeRight") }
+    @Deprecated("Deprecated in Java")
     override fun swipeDown() { Log.d(TAG, "swipeDown") }
+    @Deprecated("Deprecated in Java")
     override fun swipeUp() { Log.d(TAG, "swipeUp") }
     // --- End of KeyboardView.OnKeyboardActionListener methods ---
 

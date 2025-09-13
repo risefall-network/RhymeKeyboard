@@ -2,32 +2,30 @@ package com.antih3ro.rhymekeyboard
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.antih3ro.rhymekeyboard.databinding.SuggestionItemBinding
 
-class SuggestionAdapter(
-    private val onSuggestionClick: (String) -> Unit
-) : ListAdapter<String, SuggestionAdapter.SuggestionViewHolder>(SuggestionDiffCallback()) {
+class SuggestionAdapter(private val onWordClick: (String) -> Unit) :
+    ListAdapter<String, SuggestionAdapter.SuggestionViewHolder>(SuggestionDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuggestionViewHolder {
-        val button = LayoutInflater.from(parent.context)
-            .inflate(R.layout.suggestion_item, parent, false) as Button
-        return SuggestionViewHolder(button, onSuggestionClick)
+        val binding = SuggestionItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return SuggestionViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: SuggestionViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        val word = getItem(position)
+        holder.bind(word)
+        holder.itemView.setOnClickListener { onWordClick(word) }
     }
 
-    class SuggestionViewHolder(
-        private val button: Button,
-        private val onSuggestionClick: (String) -> Unit
-    ) : RecyclerView.ViewHolder(button) {
+    class SuggestionViewHolder(binding: SuggestionItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        private val textView: TextView = binding.suggestionWord
         fun bind(word: String) {
-            button.text = word
-            button.setOnClickListener { onSuggestionClick(word) }
+            textView.text = word
         }
     }
 }

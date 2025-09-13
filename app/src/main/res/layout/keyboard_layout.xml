@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/keyboard_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="?android:attr/windowBackground">
+    android:layout_alignParentBottom="true">
 
-    <!-- Your suggestion bar, now a RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/suggestion_recycler_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/status_ready"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <CheckBox
+            android:id="@+id/aggregate_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aggregate"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestion_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <TextView
-        android:id="@+id/status_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <CheckBox
-        android:id="@+id/aggregate_toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/aggregate_rhymes"/>
-
-    <!-- KeyboardView to render the keys efficiently -->
     <android.inputmethodservice.KeyboardView
         android:id="@+id/keyboard_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:keyBackground="@drawable/key_background"
-        android:keyTextColor="@color/key_text_color"
-        android:keyTextSize="@dimen/key_text_size"
-        android:shadowColor="#00000000"
-        android:shadowRadius="0.0"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:background="@android:color/transparent"
         android:keyPreviewLayout="@null"
-        />
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
 </LinearLayout>
